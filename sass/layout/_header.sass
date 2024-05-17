@@ -1,0 +1,72 @@
+.header
+    position: relative
+    height: 100vh
+    background: url(../img/section1-fons.png) center / cover no-repeat
+    &__colums
+        height: 95vh
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__logo
+        width: 25.5rem
+        height: 18.5rem
+    &__box
+        height: 25rem
+    @include respond(phone)
+        height: 60vh
+        &__box
+            display: 
+    @include respond(tab-port)
+        height: 80vh
+        &__colums
+            height: 75vh
+
+.logo-nav
+    min-height: 18.5rem
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    @include respond(phone)
+        flex-direction: column
+        justify-content: center
+        row-gap: 1.5rem
+        &__logo
+            margin-bottom: 2rem
+    @include respond(tab-port)
+        flex-direction: column
+        flex-wrap: nowrap
+        row-gap: .7rem
+        
+
+// Блок социальные сети иконки
+
+.socials
+    width: 20rem
+    height: 6rem
+    display: flex
+    justify-content: space-between
+        
+.fa
+    font-size: 2.5rem
+    width: 5rem
+    height: 5rem
+    text-align: center
+    text-decoration: none
+    margin: .5rem .2rem
+    display: flex
+    border-radius: 50%
+    justify-content: center
+    align-items: center
+
+.fa-facebook
+    background: #3b5998
+    color: $color-white
+
+.fa-instagram
+    color: $color-white
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)
+
+.fa-vk
+    color: $color-white
+    background: #0077FF

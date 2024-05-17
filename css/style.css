@@ -1,0 +1,1172 @@
+@charset "UTF-8";
+@keyframes glowing {
+  0% {
+    background-color: #DAAE63;
+    box-shadow: 0 0 5px #DAAE63;
+  }
+  50% {
+    background-color: #49e819;
+    box-shadow: 0 0 20px #49e819;
+  }
+  100% {
+    background-color: #DAAE63;
+    box-shadow: 0 0 5px #DAAE63;
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes OpacitiText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_base.sass */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 6, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_base.sass */
+body {
+  background-color: #262223;
+}
+
+/* line 9, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_base.sass */
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+/* line 12, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_base.sass */
+.container {
+  position: relative;
+  z-index: 0;
+}
+
+/* line 16, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_base.sass */
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 16, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_base.sass */
+  .row {
+    max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 16, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_base.sass */
+  .row {
+    max-width: 95%;
+  }
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+.title-first {
+  min-height: 25rem;
+  color: #ffffff;
+}
+
+/* line 4, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+.title-first__main {
+  display: block;
+  font-family: "Lobster";
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  color: #DAAE63;
+  display: flex;
+  align-items: center;
+  animation-name: leftToRight;
+  animation-duration: 1.7s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+}
+
+/* line 18, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+.title-first__secondary {
+  height: 16rem;
+  display: block;
+  font-family: "Abril Fatface";
+  font-size: 17.5rem;
+  letter-spacing: 1rem;
+  display: flex;
+  align-items: center;
+  animation-name: RightToLeft;
+  animation-duration: 1.7s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 32, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+  .title-first__main {
+    font-size: 2rem;
+    justify-content: center;
+  }
+  /* line 35, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+  .title-first__secondary {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 38, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+  .title-first__secondary {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 41, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+  .title-first__secondary {
+    font-size: 10rem;
+  }
+}
+
+/* line 46, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+.title-secondary {
+  font-size: 5rem;
+  letter-spacing: .5rem;
+  line-height: 100%;
+  font-weight: 700;
+  font-family: "Roboto";
+  color: #DAAE63;
+  margin-bottom: 1.5rem;
+  animation-name: leftToRight;
+  animation-duration: 1.7s;
+  animation-delay: .5s;
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 46, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+  .title-secondary {
+    font-size: 3rem;
+    letter-spacing: .5rem;
+  }
+}
+
+/* line 69, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+.title-third {
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Roboto";
+  color: #ffffff;
+  margin-bottom: 2rem;
+  animation-name: RightToLeft;
+  animation-duration: 1.7s;
+  animation-delay: .5s;
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 69, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+  .title-third {
+    font-size: 1.6rem;
+  }
+}
+
+/* line 86, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+.paragraph {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  line-height: 140%;
+  font-weight: 400;
+  font-family: "Roboto";
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  animation-name: OpacitiText;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 86, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+  .paragraph {
+    font-size: 1.4rem;
+  }
+}
+
+/* line 101, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+.text-align-center {
+  text-align: center;
+}
+
+/* line 104, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/base/_typography.sass */
+.text-color-gold {
+  color: #DAAE63;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_us-about.sass */
+.us-about {
+  min-height: 68rem;
+  background: url(../img/fon-img-site.png) center/cover no-repeat;
+}
+
+/* line 4, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_us-about.sass */
+.us-about__wrapper {
+  max-width: 114rem;
+  margin: 0 auto;
+  min-height: 50rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* line 11, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_us-about.sass */
+.us-about__img-dogs {
+  width: 50rem;
+  height: 50rem;
+  background: url(../img/sec6-img.png) center/cover no-repeat;
+}
+
+/* line 15, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_us-about.sass */
+.us-about__content-box {
+  display: inline-block;
+  max-width: 60rem;
+  min-height: 40rem;
+  background: #262223;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+/* line 22, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_us-about.sass */
+.us-about__content-box__img-dogs {
+  max-width: 40rem;
+  max-height: 40rem;
+}
+
+/* line 25, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_us-about.sass */
+.us-about__content-box__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90rem;
+  margin-bottom: 2rem;
+}
+
+/* line 31, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_us-about.sass */
+.us-about__content-box__content-box {
+  top: -10rem;
+  left: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 35, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_us-about.sass */
+  .us-about__wrapper {
+    row-gap: 1rem;
+    padding: 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 39, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_us-about.sass */
+  .us-about__wrapper {
+    row-gap: 1rem;
+    padding: 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 43, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_us-about.sass */
+  .us-about__wrapper {
+    row-gap: 1rem;
+    padding: 1rem 1rem;
+  }
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.services {
+  min-height: 95rem;
+  background: #363334;
+}
+
+/* line 4, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.services__wrapper {
+  min-height: 72rem;
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 14, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+  .services__wrapper {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 18, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+  .services__wrapper {
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 21, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+  .services__wrapper {
+    justify-content: space-around;
+  }
+}
+
+/* line 26, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.inner-text {
+  width: 27rem;
+  height: 8rem;
+  overflow: hidden;
+  display: flex;
+}
+
+/* line 31, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.inner-text__text {
+  width: 23rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 40, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.flip-card {
+  background-color: transparent;
+  width: 27rem;
+  height: 35rem;
+  perspective: 100rem;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 40, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+  .flip-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 40, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+  .flip-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 40, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+  .flip-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* line 53, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* line 63, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* line 67, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* line 74, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.flip-card-front {
+  background: #262223;
+  color: black;
+}
+
+/* line 77, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.flip-card-front img {
+  width: 27rem;
+  height: 27rem;
+}
+
+/* line 82, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.flip-card-back {
+  background: #262223;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* line 86, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_services.sass */
+.flip-card-back__inner {
+  height: 15rem;
+  margin-top: 10rem;
+  padding: 1rem 0rem;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+.why-choose-us {
+  min-height: 85rem;
+}
+
+/* line 3, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+.why-choose-us__wrapper {
+  max-width: 114rem;
+  margin: 0 auto;
+  min-height: 70rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 12, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+  .why-choose-us__wrapper {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 16, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+  .why-choose-us__wrapper {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 20, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+  .why-choose-us__wrapper {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+/* line 24, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+.content-wrap {
+  max-width: 54rem;
+  height: 34rem;
+}
+
+/* line 27, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+.content-wrap__img {
+  width: 37rem;
+  height: 34rem;
+}
+
+/* line 30, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+.content-wrap__icon-dog {
+  width: 17rem;
+  height: 17rem;
+  margin-left: -8.5rem;
+  margin-top: 4rem;
+}
+
+/* line 35, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+.content-wrap__inner-text {
+  width: 30rem;
+  min-height: 18rem;
+  display: inline-block;
+  position: relative;
+  left: 5rem;
+  top: -18rem;
+}
+
+/* line 42, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+.content-wrap__inner-text p {
+  font-size: 1.4rem;
+  line-height: 120%;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 24, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+  .content-wrap {
+    height: 25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* line 52, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+  .content-wrap__img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 24, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+  .content-wrap {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 24, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+  .content-wrap {
+    margin-bottom: 1rem;
+  }
+}
+
+/* line 58, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+.inner-block {
+  display: inline-block;
+  width: 36rem;
+  height: 25rem;
+  overflow: hidden;
+  background: #363334;
+  border-radius: 1rem;
+  position: relative;
+  left: 18rem;
+  top: -30rem;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 58, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_why-choose-us.sass */
+  .inner-block {
+    left: 0;
+    top: 0;
+  }
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_guests-gallery.sass */
+.guests-gallery {
+  min-height: 105rem;
+  background: #363334;
+}
+
+/* line 4, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_guests-gallery.sass */
+.guests-gallery a {
+  text-decoration: none;
+  color: #DAAE63;
+}
+
+/* line 7, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_guests-gallery.sass */
+.guests-gallery__wrapper {
+  max-width: 114rem;
+  margin: 0 auto;
+  min-height: 85rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+/* line 15, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_guests-gallery.sass */
+.guests-gallery img {
+  width: 37.2rem;
+  height: 27.9rem;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 20, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_guests-gallery.sass */
+  .guests-gallery__wrapper {
+    flex-direction: column;
+    align-content: center;
+  }
+  /* line 23, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_guests-gallery.sass */
+  .guests-gallery img {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 26, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_guests-gallery.sass */
+  .guests-gallery img {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 29, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_guests-gallery.sass */
+  .guests-gallery__wrapper {
+    justify-content: space-around;
+  }
+  /* line 31, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_guests-gallery.sass */
+  .guests-gallery img {
+    margin-bottom: 1rem;
+  }
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_question-answer.sass */
+.quastion-answer {
+  height: auto;
+  padding-bottom: 2rem;
+  background: url(../img/fon-img-site.png) center/cover no-repeat;
+}
+
+/* line 5, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_question-answer.sass */
+.quastion-answer__content {
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background: #363334;
+  font-family: "Roboto";
+  font-size: 1.4rem;
+  color: #ffffff;
+  letter-spacing: .1rem;
+  margin-bottom: 1rem;
+}
+
+/* line 16, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_question-answer.sass */
+.collapsible {
+  background: #262223;
+  border: none;
+  border-bottom: 0.1rem solid #DAAE63;
+  cursor: pointer;
+  padding: 0 1rem;
+  width: 100%;
+  outline: none;
+  color: #DAAE63;
+  text-align: left;
+  margin: none;
+  font-family: "Roboto";
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 33, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_question-answer.sass */
+.active {
+  background: #363334;
+}
+
+/* line 37, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_question-answer.sass */
+.collapsible:after {
+  content: '\002B';
+  color: #DAAE63;
+  font-weight: 300;
+  font-size: 4rem;
+  transition: .5s;
+}
+
+/* line 45, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_question-answer.sass */
+.active:after {
+  content: "\002B";
+  transform: rotate(45deg);
+  transition: .5s;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_contacts.sass */
+.contacts {
+  height: auto;
+  padding-bottom: 1rem;
+  background: #363334;
+}
+
+/* line 5, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_contacts.sass */
+.contacts__wrapper {
+  min-height: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* line 10, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_contacts.sass */
+.inner {
+  width: 30rem;
+  min-height: 20rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 17, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_contacts.sass */
+.inner__telephon {
+  text-decoration: none;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_form-site.sass */
+.form-site {
+  min-height: 90rem;
+  background: url(../img/fon-img-site.png) center/cover no-repeat;
+}
+
+/* line 4, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_form-site.sass */
+.form-site__wrapper {
+  max-width: 114rem;
+  margin: 0 auto;
+  min-height: 55rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 13, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_form-site.sass */
+.form-site__wrapper img {
+  max-width: 56rem;
+  height: 55rem;
+}
+
+/* line 16, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_form-site.sass */
+.form-site__inner {
+  width: 56rem;
+  height: 55rem;
+  background: #262223;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+/* line 22, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_form-site.sass */
+.form-site__forms-block {
+  max-width: 52rem;
+  height: 51rem;
+  border-radius: 1rem;
+  padding-top: .5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 28, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_form-site.sass */
+  .form-site__wrapper {
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+  }
+  /* line 32, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_form-site.sass */
+  .form-site__wrapper img {
+    width: 100%;
+    min-height: 30rem;
+  }
+  /* line 35, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_form-site.sass */
+  .form-site__inner {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 38, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_form-site.sass */
+  .form-site__wrapper {
+    flex-direction: column;
+    align-content: center;
+    row-gap: 1rem;
+    padding: 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 44, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_form-site.sass */
+  .form-site__wrapper {
+    flex-direction: column;
+    align-content: center;
+    row-gap: 1rem;
+    padding: 1rem 1rem;
+  }
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/content/_reviews.sass */
+.reviews {
+  min-height: 60rem;
+  border: .1rem solid #FFFFFF;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_icon-dog.sass */
+.icon-dog {
+  width: 8rem;
+  height: 8rem;
+  margin-left: -4rem;
+  background: url(../icon/icon-dog.svg) center/cover no-repeat;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_form.sass */
+.form {
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* line 6, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_form.sass */
+.form__input {
+  height: 5rem;
+  background: none;
+  border: none;
+  border: 0.1rem solid #DAAE63;
+  border-radius: .5rem;
+  padding-left: 1rem;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* line 17, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_form.sass */
+.form__massage {
+  height: 15rem;
+  border: none;
+  background: none;
+  border: 0.1rem solid #DAAE63;
+  border-radius: .5rem;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 1rem;
+  resize: vertical;
+}
+
+/* line 29, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_form.sass */
+.form__btn {
+  width: 15rem;
+  height: 4rem;
+  color: #ffffff;
+  font-family: "Roboto";
+  padding: 1rem 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #DAAE63;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_myBtnTop.sass */
+#toTop {
+  width: 5rem;
+  height: 5rem;
+  background: #DAAE63;
+  border-radius: 1rem;
+  text-align: center;
+  padding: .5rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: 700;
+  z-index: 1000;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_nav.sass */
+.nav {
+  width: 40rem;
+  height: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 8, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_nav.sass */
+.nav__element {
+  height: 2rem;
+  list-style-type: none;
+}
+
+/* line 11, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_nav.sass */
+.nav__link {
+  text-decoration: none;
+}
+
+/* line 13, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_nav.sass */
+.nav__text {
+  font-family: "Roboto";
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* line 18, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_nav.sass */
+.nav__text:hover {
+  border-bottom: 0.2rem solid #DAAE63;
+  color: #DAAE63;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_nav.sass */
+  .nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_nav.sass */
+  .nav {
+    margin-bottom: 2rem;
+  }
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_btnSiteAnim.sass */
+.btn-wrap {
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 7, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_btnSiteAnim.sass */
+.btnSiteAnim {
+  width: 15rem;
+  height: 4rem;
+  background-color: #1c87c9;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto" sans-serif;
+  font-size: 1.6rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  animation: glowing 1300ms infinite;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_modal.sass */
+.modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  z-index: 500;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 12, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_modal.sass */
+.modal__content {
+  width: 50%;
+  background: #262223;
+  margin: 5% auto;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 18, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_modal.sass */
+  .modal__content {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 21, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_modal.sass */
+  .modal__content {
+    width: 90%;
+  }
+}
+
+/* line 27, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/components/_modal.sass */
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+.header {
+  position: relative;
+  height: 100vh;
+  background: url(../img/section1-fons.png) center/cover no-repeat;
+}
+
+/* line 5, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+.header__colums {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* line 10, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+.header__logo {
+  width: 25.5rem;
+  height: 18.5rem;
+}
+
+/* line 13, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+.header__box {
+  height: 25rem;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+  .header {
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+  .header {
+    height: 80vh;
+  }
+  /* line 21, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+  .header__colums {
+    height: 75vh;
+  }
+}
+
+/* line 24, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+.logo-nav {
+  min-height: 18.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 24, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+  .logo-nav {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.5rem;
+  }
+  /* line 34, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+  .logo-nav__logo {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 24, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+  .logo-nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: .7rem;
+  }
+}
+
+/* line 44, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+.socials {
+  width: 20rem;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 50, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+.fa {
+  font-size: 2.5rem;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  text-decoration: none;
+  margin: .5rem .2rem;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 62, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+.fa-facebook {
+  background: #3b5998;
+  color: #ffffff;
+}
+
+/* line 66, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+.fa-instagram {
+  color: #ffffff;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* line 70, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_header.sass */
+.fa-vk {
+  color: #ffffff;
+  background: #0077FF;
+}
+
+/* line 1, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_footer.sass */
+.footer {
+  height: 30rem;
+  border-top: 0.5rem solid #DAAE63;
+}
+
+/* line 4, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_footer.sass */
+.footer__logo {
+  width: 25.5rem;
+  height: 18.5rem;
+}
+
+/* line 7, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_footer.sass */
+.footer__desc {
+  width: 30rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 13, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_footer.sass */
+.footer__a-developer {
+  text-decoration: none;
+}
+
+/* line 16, ../Готовые проекты/Лэндинг/BARBERPET BY/sass/layout/_footer.sass */
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 114rem;
+  height: 30rem;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */

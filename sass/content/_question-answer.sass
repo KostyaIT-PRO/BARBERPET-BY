@@ -1,0 +1,48 @@
+.quastion-answer
+    height: auto
+    padding-bottom: 2rem 
+    background: url(../img/fon-img-site.png) center / cover no-repeat
+    &__content 
+        padding: 0 1rem
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.2s ease-out
+        background: $color-gray
+        font-family: "Roboto"
+        font-size: 1.4rem
+        color: $color-white
+        letter-spacing: .1rem
+        margin-bottom: 1rem
+.collapsible 
+    background: $color-gray-dark
+    border: none
+    border-bottom: .1rem solid $color-gold
+    cursor: pointer
+    padding: 0 1rem
+    width: 100%
+    outline: none
+    color: $color-gold
+    text-align: left
+    margin: none
+    font-family: "Roboto"
+    font-size: 2.5rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+        
+.active 
+    background: $color-gray
+
+
+.collapsible:after 
+    content: '\002B'
+    color: $color-gold
+    font-weight: 300
+    font-size: 4rem
+    transition: .5s
+
+
+.active:after 
+    content: "\002B"
+    transform: rotate(45deg)
+    transition: .5s

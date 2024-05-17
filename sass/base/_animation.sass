@@ -1,0 +1,43 @@
+  
+//Анимация мигания кнопки
+@keyframes glowing 
+      0% { background-color: $color-gold; box-shadow: 0 0 5px $color-gold }
+      50% { background-color: #49e819; box-shadow: 0 0 20px #49e819 }
+      100% { background-color: $color-gold; box-shadow: 0 0 5px $color-gold }
+      
+
+//Анимация которая двигает текст слева направо.
+@keyframes leftToRight
+    0%
+        opacity: 0
+        transform: translateX(-10rem)
+    80%
+        transform: translateX(1rem)
+    
+    
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+//Анимация которая двигает текст права на лево.
+@keyframes RightToLeft
+    0%
+        opacity: 0
+        transform: translateX(10rem)
+    80%
+        transform: translateX(-1rem)
+    
+    
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+
+//Анимация проявления текста.
+@keyframes OpacitiText
+    0%
+        opacity: 0
+       
+    100%
+        opacity: 1
+        

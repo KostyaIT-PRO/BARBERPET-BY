@@ -1,0 +1,105 @@
+.title-first
+    min-height: 25rem
+    color: $color-white
+    &__main
+        display: block
+        font-family: "Lobster"
+        font-size: 5rem
+        letter-spacing: 1rem
+        color: $color-gold
+        display: flex
+        align-items: center
+        animation-name: leftToRight
+        animation-duration: 1.7s
+        animation-delay: 1s
+        animation-timing-function: ease
+        backface-visibility: hidden
+        
+    &__secondary
+        height: 16rem
+        display: block
+        font-family: "Abril Fatface"
+        font-size: 17.5rem
+        letter-spacing: 1rem
+        display: flex
+        align-items: center
+        animation-name: RightToLeft
+        animation-duration: 1.7s
+        animation-delay: 1s
+        animation-timing-function: ease
+        backface-visibility: hidden
+    @include respond(phone)
+        &__main
+            font-size: 2rem
+            justify-content: center
+        &__secondary
+            display: none
+    @include respond(tab-port)
+        &__secondary
+            font-size: 5rem
+    @include respond(tab-land)
+        &__secondary
+            font-size: 10rem
+    @include respond(big-screen)
+        
+
+.title-secondary
+    font-size: $font-size-paragraph-h2
+    letter-spacing: .5rem
+    line-height: 100%
+    font-weight: 700
+    font-family: "Roboto"
+    color: $color-gold
+    margin-bottom: 1.5rem
+    animation-name: leftToRight
+    animation-duration: 1.7s
+    animation-delay: .5s
+    animation-timing-function: ease
+    backface-visibility: hidden
+    @include respond(phone)
+        font-size: 3rem
+        letter-spacing: .5rem
+    @include respond(tab-port)
+        
+    @include respond(tab-land)
+
+    @include respond(big-screen)
+    
+
+.title-third
+    font-size: $font-size-paragraph-h3
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 400
+    font-family: "Roboto"
+    color: $color-white
+    margin-bottom: 2rem
+    animation-name: RightToLeft
+    animation-duration: 1.7s
+    animation-delay: .5s
+    animation-timing-function: ease
+    backface-visibility: hidden
+    @include respond(phone)
+        font-size: 1.6rem
+   
+
+.paragraph
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem
+    line-height: 140%
+    font-weight: 400
+    font-family: "Roboto"
+    color: $color-white
+    margin-bottom: 1.5rem
+    animation-name: OpacitiText
+    animation-duration: 3s
+    animation-timing-function: ease
+    backface-visibility: hidden
+    @include respond(phone)
+        font-size: 1.4rem
+    
+.text-align-center
+    text-align: center
+
+.text-color-gold
+    color: $color-gold

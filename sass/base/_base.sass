@@ -1,0 +1,28 @@
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    background-color: $color-gray-dark
+
+html
+    font-size: 10px
+
+.container
+    position: relative
+    z-index: 0
+
+.row
+    max-width: $grid-width
+    margin: 0 auto
+    padding-top: 2rem
+    overflow: hidden
+    @include respond(phone)
+        max-width: 95%
+    @include respond(tab-port)
+        max-width: 95%
+    @include respond(tab-land)
+       
+    @include respond(big-screen)
+        

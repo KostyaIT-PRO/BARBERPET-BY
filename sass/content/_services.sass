@@ -1,0 +1,89 @@
+.services
+    min-height: 95rem
+    background: $color-gray
+    &__wrapper
+        min-height: 72rem
+        max-width: $grid-width
+        margin: 0 auto
+        margin-bottom: 3rem
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-content: space-between
+    @include respond(phone)
+        &__wrapper
+            flex-direction: column
+            align-content: center
+    @include respond(tab-port)
+        &__wrapper
+            justify-content: space-evenly
+    @include respond(tab-land)
+        &__wrapper
+            justify-content: space-around
+        
+
+
+.inner-text
+    width: 27rem
+    height: 8rem
+    overflow: hidden
+    display: flex
+    &__text
+        width: 23rem
+        height: 8rem
+        display: flex
+        justify-content: center
+        align-items: center
+        
+
+
+.flip-card 
+    background-color: transparent
+    width: 27rem
+    height: 35rem
+    perspective: 100rem
+    @include respond(phone)
+        margin-bottom: 1rem
+    @include respond(tab-port)
+        margin-bottom: 1rem
+    @include respond(tab-land)
+        margin-bottom: 1rem
+
+
+.flip-card-inner 
+    position: relative
+    width: 100%
+    height: 100%
+    text-align: center
+    transition: transform 0.6s
+    transform-style: preserve-3d
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+
+
+.flip-card:hover .flip-card-inner 
+    transform: rotateY(180deg)
+
+
+.flip-card-front, .flip-card-back 
+    position: absolute;
+    width: 100%
+    height: 100%
+    backface-visibility: hidden
+
+
+.flip-card-front 
+    background: $color-gray-dark
+    color: black
+    img
+        width: 27rem
+        height: 27rem
+    
+
+.flip-card-back 
+    background: $color-gray-dark
+    color: white
+    transform: rotateY(180deg)
+    &__inner
+        height: 15rem
+        margin-top: 10rem
+        padding: 1rem 0rem

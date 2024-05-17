@@ -1,0 +1,71 @@
+.why-choose-us
+    min-height: 85rem
+    &__wrapper
+        max-width: $grid-width
+        margin: 0 auto
+        min-height: 70rem
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-content: space-between
+    @include respond(phone)
+        &__wrapper
+            flex-direction: column
+            align-content: center
+    @include respond(tab-port)
+        &__wrapper
+            flex-direction: column
+            align-content: center
+    @include respond(tab-land)
+        &__wrapper
+            flex-direction: column
+            align-content: center
+
+.content-wrap
+    max-width: 54rem
+    height: 34rem
+    &__img
+        width: 37rem
+        height: 34rem
+    &__icon-dog
+        width: 17rem
+        height: 17rem
+        margin-left: -8.5rem
+        margin-top: 4rem 
+    &__inner-text
+        width: 30rem
+        min-height: 18rem
+        display: inline-block
+        position: relative
+        left: 5rem
+        top: -18rem
+        p
+            
+            font-size: 1.4rem
+            line-height: 120%
+    @include respond(phone)
+        height: 25rem
+        margin-bottom: 1rem
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        &__img
+            display: none
+    @include respond(tab-port)
+        margin-bottom: 1rem
+    @include respond(tab-land)
+        margin-bottom: 1rem
+.inner-block
+    display: inline-block
+    width: 36rem
+    height: 25rem
+    overflow: hidden
+    background: $color-gray
+    border-radius: 1rem
+    position: relative
+    left: 18rem
+    top: -30rem
+    @include respond(phone)
+        left: 0
+        top: 0
+

@@ -1,0 +1,32 @@
+.guests-gallery
+    min-height: 105rem
+    background: $color-gray
+    a
+        text-decoration: none
+        color: $color-gold
+    &__wrapper
+        max-width: $grid-width
+        margin: 0 auto
+        min-height: 85rem
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-content: space-between
+    img
+        width: 37.2rem
+        height: 27.9rem
+
+    @include respond(phone)
+        &__wrapper
+            flex-direction: column
+            align-content: center
+        img
+            margin-bottom: 1rem
+    @include respond(tab-port)
+        img
+            margin-bottom: 1rem
+    @include respond(tab-land)
+        &__wrapper
+            justify-content: space-around
+        img
+            margin-bottom: 1rem

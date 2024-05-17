@@ -1,0 +1,49 @@
+.form-site
+    min-height: 90rem
+    background: url(../img/fon-img-site.png) center / cover no-repeat
+    &__wrapper
+        max-width: $grid-width
+        margin: 0 auto
+        min-height: 55rem
+        margin-top: 2rem
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        img
+            max-width: 56rem
+            height: 55rem
+    &__inner
+        width: 56rem
+        height: 55rem
+        background: $color-gray-dark
+        border-radius: 1rem
+        padding: 2rem
+    &__forms-block
+        max-width: 52rem
+        height: 51rem
+        border-radius: 1rem
+        padding-top: .5rem
+    @include respond(phone)
+        &__wrapper
+            width: 100%
+            flex-direction: column
+            align-content: center
+            img
+                width: 100%
+                min-height: 30rem
+        &__inner
+            width: 100%
+    @include respond(tab-port)
+        &__wrapper
+            flex-direction: column
+            align-content: center
+            row-gap: 1rem
+            padding: 1rem 1rem
+    @include respond(tab-land)
+        &__wrapper
+            flex-direction: column
+            align-content: center
+            row-gap: 1rem
+            padding: 1rem 1rem
+

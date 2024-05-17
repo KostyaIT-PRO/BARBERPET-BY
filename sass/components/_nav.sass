@@ -1,0 +1,25 @@
+.nav
+    width: 40rem
+    height: 6rem
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    &__element
+        height: 2rem
+        list-style-type: none
+    &__link
+        text-decoration: none
+    &__text
+        font-family: "Roboto"
+        font-size: 2.5rem
+        font-weight: 700
+        color: $color-white
+        &:hover
+            border-bottom: .2rem solid $color-gold
+            color: $color-gold
+    @include respond(phone)
+        display: none
+    @include respond(tab-port)
+        margin-bottom: 2rem
+       
